@@ -1,0 +1,16 @@
+flowchart LR
+    subgraph AF["Этап 1 · Active Fire (VIIRS 375 м, 256×256)"]
+        AF_IN["I1–I5 + углы + WorldCover + ERA5"] --> AF_SCR["Скрининг воды/NaN/блика\nШкалы день/ночь (SZA 95°)"]
+        AF_SCR --> AF_CTX["Контекстный тест 71×71\nk_sigma = 2.5 → маска 0/1"]
+    end
+
+    subgraph BS["Этап 2 · Burn Scar & Severity (Sentinel-2 20 м + S1, 512×512)"]
+        BS_IN["S2 pre/post + SCL + S1 VV/VH + LC"] --> BS_HGB["dNBR/NDVI/NDMI (23 признака)\nSCL_BAD=(3,8,9,11) + HistGradientBoosting"]
+        BS_HGB --> BS_POST["Majority 3×3 + min_patch 96 px\nСтепени поражения 0–3"]
+    end
+
+    AF_CTX --> SUB["inference.py --validate\nsubmission.csv (447 строк RLE)\nScore 0.7455"]
+    BS_POST --> SUB
+
+    AF_CTX --> SRV["service/app.py (FastAPI)\nGeoJSON · Shapefile · CSV/JSON\nviewer/map.html (Three.js 3D)"]
+    BS_POST --> SRV

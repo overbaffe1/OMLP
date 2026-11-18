@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Секреты и локальные настройки
+.env
+.env.*
+!.env.example
+
+# Крупные сырые датасеты и временные прогоны
+data/train/
+data/test/
+data/raw/
+*.tif
+*.tiff
+*.rar
+*.tar
+*.tar.gz
+paint_overlay.json
+submission_fresh.csv
+submission_map.csv
+submission_test.csv
+submission_train.csv
+
+# ОС и редакторы
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

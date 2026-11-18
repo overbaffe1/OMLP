@@ -1,0 +1,11 @@
+# Корректная статистика языка репозитория на GitHub (Python — основной код проекта)
+viewer/map.html linguist-generated=true
+service/catalog.json linguist-generated=true
+submissions/*.csv linguist-generated=true
+docs/presentation-technical.html linguist-generated=true
+docs/numbers.json linguist-generated=true
+docs/severity_loop.json linguist-generated=true
+assets/*.svg linguist-generated=true
+assets/*.geojson linguist-generated=true
+assets/*.stl linguist-generated=true binary
+data/aoi/* linguist-generated=true

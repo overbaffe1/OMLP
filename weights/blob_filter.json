@@ -1,0 +1,42 @@
+{
+  "threshold": 0.3,
+  "config": {
+    "threshold": 0.5,
+    "min_area": 1,
+    "pixel_t4": 305.0,
+    "pixel_delta": 4.0,
+    "dilate_weak": 2,
+    "weak_margin": 3.0
+  },
+  "feature_names": [
+    "area_px",
+    "bbox_fill",
+    "max_i4",
+    "mean_i4",
+    "p90_i4",
+    "max_delta",
+    "mean_delta",
+    "p90_delta",
+    "delta_spread",
+    "frac_saturated",
+    "mean_i1",
+    "max_i1",
+    "mean_i3",
+    "max_i3",
+    "glint_frac",
+    "frac_built",
+    "frac_tree",
+    "frac_grass",
+    "frac_crop",
+    "frac_bare",
+    "frac_water",
+    "edge_ratio",
+    "neighbour_weak"
+  ],
+  "metrics": {
+    "val_f1": 0.95685,
+    "n_blobs_train": 399,
+    "pos": 394
+  },
+  "model_file": "blob_filter.pkl"
+}
