@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Если вы используете код или материалы этого репозитория, пожалуйста, процитируйте проект."
+title: "КосмоФАЙР-2: двухэтапный мониторинг природных пожаров по данным ДЗЗ (КосмоХакатон 2026)"
+type: software
+authors:
+  - alias: "overbaffe1"
+    name: "Команда «Ленивые в орбите» (overbaffe1)"
+repository-code: "https://github.com/overbaffe1/OMLP"
+license: MIT
+version: "2.0.0"
+date-released: "2026-09-20"
+keywords:
+  - remote-sensing
+  - wildfire-detection
+  - burn-severity
+  - viirs
+  - sentinel-2
+  - sentinel-1
+  - dnbr
+  - fastapi
+  - geojson
+  - hackathon
+abstract: >-
+  Двухэтапный конвейер и аналитический геосервис для мониторинга природных пожаров
+  по спутниковым снимкам (кейс КосмоХакатона 2026, Красноярск; итог жюри 83,67/100,
+  19-е место из 47 команд; лучший Score платформы 0.7455). Включает контекстную
+  детекцию активного горения VIIRS 375 м, градиентный бустинг и пространственную
+  постобработку степени поражения растительности (0–3) по Sentinel-2/1 20 м,
+  REST API (FastAPI, GeoJSON/Shapefile/CSV) и 3D-просмотрщик чипов на Three.js.

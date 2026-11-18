@@ -1,0 +1,26 @@
+# Минимальный набор для работы решения и сервиса.
+# Версии зафиксированы по «нижней границе» — решение проверено на актуальных релизах.
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.2
+tifffile>=2022.5
+#
+# сервис
+fastapi>=0.104
+uvicorn[standard]>=0.24
+pydantic>=2.4
+pyshp>=2.3
+#
+# обучение и отчётность
+matplotlib>=3.7
+#
+# GPU-обучение модели степени поражения (необязательно — на CPU решение работает без него):
+#   py -3 -m pip install xgboost            # сборка из PyPI умеет CUDA
+#   py -3 -m pip install nvidia-cuda-runtime-cu12   # если нет CUDA-рантайма, но есть драйвер
+# Проверка: py -3 -c "import xgboost; print(xgboost.build_info()['USE_CUDA'])"
+# и py -3 tools\train_loop.py --device cuda (без GPU сам откатится на CPU).
+# xgboost>=2.0
+#
+# тесты
+pytest>=7.4
+httpx>=0.25

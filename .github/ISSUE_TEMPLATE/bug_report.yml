@@ -1,0 +1,31 @@
+name: Сообщить об ошибке
+description: Воспроизводимая проблема в конвейере AF/BS, RLE-кодеке или геосервисе FastAPI
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Компонент
+      options:
+        - "AF — активное горение (fires/af.py, blobfilter.py)"
+        - "BS — гарь и степень поражения (fires/bs.py, severity.py)"
+        - "CLI — inference.py / train.py / evaluate.py"
+        - "Сервис — FastAPI, GeoJSON / Shapefile (service/)"
+        - "Визуализация — viewer/map.html или документация"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как воспроизвести
+      placeholder: |
+        1. Запустить `python inference.py --data-dir ... --weights weights/weights_probe_35.json --validate`
+        2. Получить ...
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Окружение
+      placeholder: "ОС, версия Python, CPU/GPU, использованный файл весов"

@@ -1,0 +1,171 @@
+{
+  "version": 2,
+  "seed": 20260918,
+  "af_mode": "rules",
+  "blob_filter": null,
+  "bs_mode": "model",
+  "severity_model": "severity_model.pkl",
+  "severity_class_bias": [
+    0.05,
+    -0.15,
+    -0.06,
+    0.0
+  ],
+  "af": {
+    "k_sigma": 3.0,
+    "delta_day": 25.0,
+    "candidate_t4": 330.0,
+    "candidate_t4_night": 295.0,
+    "min_cluster_px": 1,
+    "exclude_built": false,
+    "isolated_guard": false
+  },
+  "bs": {
+    "forest": [
+      0.25,
+      0.35,
+      0.65
+    ],
+    "semi": [
+      0.12,
+      0.21,
+      0.38
+    ],
+    "cropland": [
+      0.1,
+      0.19,
+      0.37
+    ],
+    "sar_recovery": false,
+    "sar_scale": [
+      3.0,
+      1.5
+    ],
+    "sar_min_drop_db": 1.0,
+    "smooth_dnbr": 3,
+    "min_patch_px": 48,
+    "fill_holes_mask": false,
+    "proba_smooth": 0,
+    "majority_filter": 0,
+    "demote_min_px": 0
+  },
+  "train_metrics": {
+    "af_val_f1": 0.92247,
+    "af_train_f1": null,
+    "af_baseline_f1": 0.92179,
+    "bs_val_iou_burn": 0.53914,
+    "bs_val_miou_sev": 0.51458,
+    "bs_baseline_iou_burn": 0.47905,
+    "bs_baseline_miou_sev": 0.43334,
+    "bs_smooth": {
+      "size": 3,
+      "fold_scores": [
+        0.31304,
+        0.27335
+      ]
+    },
+    "bs_severity_model": {
+      "backend": "sklearn",
+      "device": "cpu",
+      "params": {
+        "iterations": 300,
+        "learning_rate": 0.06,
+        "leaves": 32,
+        "min_samples_leaf": 120,
+        "l2": 3.0,
+        "colsample": 0.7,
+        "kind": "classifier",
+        "gate": false
+      },
+      "weight_mode": "sqrt",
+      "features": [
+        "dnbr",
+        "rdnbr",
+        "nbr_pre",
+        "nbr_post",
+        "ndvi_pre",
+        "ndvi_post",
+        "dndvi",
+        "ndmi_pre",
+        "ndmi_post",
+        "b12_post",
+        "b11_post",
+        "b8a_pre",
+        "b8a_post",
+        "landcover",
+        "dem",
+        "vh_pre",
+        "vh_post",
+        "dvh",
+        "vv_pre",
+        "vv_post",
+        "dvv",
+        "dnbr_ctx15",
+        "dnbr_max15",
+        "b3_pre",
+        "b3_post",
+        "b4_pre",
+        "b4_post",
+        "b2_post",
+        "b5_post",
+        "b7_post",
+        "ndwi_pre",
+        "ndwi_post",
+        "dndmi",
+        "b12_b11_post",
+        "dem_slope",
+        "dem_rel",
+        "dnbr_std15",
+        "dnbr_contrast",
+        "doy",
+        "doy_cos"
+      ],
+      "seed": 20260918
+    },
+    "af_blob_filter_val_f1": 0.89797,
+    "af_blob_filter_features_top": {
+      "mean_delta": 0.06150000000000004,
+      "neighbour_weak": 0.05350000000000006,
+      "max_delta": 0.04400000000000006,
+      "p90_i4": 0.04000000000000008,
+      "mean_i1": 0.01850000000000005,
+      "mean_i4": 0.017000000000000036,
+      "p90_delta": 0.00850000000000004,
+      "max_i4": 0.007000000000000029
+    },
+    "af_chosen_mode": "rules",
+    "bs_sar_selection": {
+      "sar_recovery": false,
+      "sar_scale": [
+        3.0,
+        1.5
+      ],
+      "sar_min_drop_db": 1.0,
+      "iou_burn": 0.48143,
+      "miou_sev": 0.44932,
+      "fold_scores": [
+        0.3033,
+        0.2667
+      ]
+    },
+    "bs_thresholds_iou_burn": 0.48714,
+    "bs_thresholds_miou_sev": 0.47931,
+    "severity_loop": {
+      "cycle": 16,
+      "name": "переобучение лучшей конфигурации на всех чипах",
+      "device": "cpu",
+      "iou_burn": 0.70098,
+      "miou_sev": 0.65122,
+      "projected_score": 0.758978,
+      "smooth": 0,
+      "majority": 0,
+      "demote": 0
+    }
+  },
+  "split": {
+    "af_train": 315,
+    "af_val": 105,
+    "bs_train": 168,
+    "bs_val": 56
+  }
+}

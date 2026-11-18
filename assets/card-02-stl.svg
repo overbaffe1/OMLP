@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 214" width="380" height="214" role="img" aria-label="02 · Покрутить рельеф dNBR в 3D (STL)">
+  <defs>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .card { fill: #0F211B !important; stroke: #275243 !important; }
+        .well { fill: #0A1612 !important; stroke: #1E4034 !important; }
+        .ink  { fill: #EFF7F3 !important; }
+        .sub  { fill: #9AB7AA !important; }
+        .tag  { fill: #6EE7B7 !important; }
+        .grid { stroke: #163027 !important; }
+      }
+    </style></defs>
+  <rect class="card" x="1" y="1" width="378" height="212" rx="13" fill="#FFFFFF" stroke="#C5D6CB" stroke-width="1.5"/>
+  <text class="tag" x="20" y="28" fill="#047857" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700">02 · 3D-ПРОСМОТРЩИК GITHUB (STL)</text>
+  <rect class="well" x="20" y="40" width="340" height="106" rx="9" fill="#0D1D18" stroke="#285042" stroke-width="1.2"/>
+  <polygon points="190,139 78,105 190,71 302,105" fill="none" stroke="#1F4437" stroke-width="1.2"/>
+  <polyline points="190.0,71.9 199.3,74.5 208.7,77.1 218.0,79.4 227.3,81.5 236.7,83.4 246.0,85.7 255.3,88.8 264.7,92.4 274.0,95.8 283.3,99.0 292.7,102.0 302.0,104.8" fill="none" stroke="#34D399" stroke-width="1.8" stroke-linecap="round"/><polyline points="171.3,77.0 180.7,79.3 190.0,81.1 199.3,82.0 208.7,81.6 218.0,80.5 227.3,81.2 236.7,85.7 246.0,92.1 255.3,97.9 264.7,102.6 274.0,106.4 283.3,109.8" fill="none" stroke="#34D399" stroke-width="1.8" stroke-linecap="round"/><polyline points="152.7,81.7 162.0,83.1 171.3,83.6 180.7,82.9 190.0,81.0 199.3,79.0 208.7,79.4 218.0,83.7 227.3,90.6 236.7,97.9 246.0,104.2 255.3,109.7 264.7,114.2" fill="none" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round"/><polyline points="134.0,86.4 143.3,86.9 152.7,86.1 162.0,84.0 171.3,81.4 180.7,79.5 190.0,80.0 199.3,83.6 208.7,90.1 218.0,98.0 227.3,105.9 236.7,112.9 246.0,118.5" fill="none" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round"/><polyline points="115.3,91.9 124.7,92.5 134.0,91.7 143.3,89.7 152.7,87.3 162.0,85.7 171.3,86.3 180.7,89.8 190.0,96.0 199.3,103.7 208.7,111.6 218.0,118.4 227.3,124.0" fill="none" stroke="#FB923C" stroke-width="1.8" stroke-linecap="round"/><polyline points="96.7,98.3 106.0,99.7 115.3,100.3 124.7,100.3 134.0,99.9 143.3,100.1 152.7,101.5 162.0,104.8 171.3,109.6 180.7,115.3 190.0,121.1 199.3,126.3 208.7,130.7" fill="none" stroke="#FB923C" stroke-width="1.8" stroke-linecap="round"/><polyline points="78.0,104.6 87.3,106.8 96.7,108.8 106.0,110.6 115.3,112.2 124.7,114.0 134.0,116.3 143.3,119.2 152.7,122.7 162.0,126.5 171.3,130.4 180.7,134.0 190.0,137.4" fill="none" stroke="#FB923C" stroke-width="1.8" stroke-linecap="round"/>
+  <text class="ink" x="20" y="172" fill="#0E221B" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="15" font-weight="700">Слепок гари dNBR в 3D</text>
+  <text class="sub" x="20" y="193" fill="#4E6B5F" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="12">56 × 56 граней · покрутить модель на GitHub →</text>
+</svg>

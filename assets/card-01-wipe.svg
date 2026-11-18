@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 214" width="380" height="214" role="img" aria-label="01 · Шторка dNBR и маска 0–3">
+  <defs>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .card { fill: #0F211B !important; stroke: #275243 !important; }
+        .well { fill: #0A1612 !important; stroke: #1E4034 !important; }
+        .ink  { fill: #EFF7F3 !important; }
+        .sub  { fill: #9AB7AA !important; }
+        .tag  { fill: #6EE7B7 !important; }
+        .grid { stroke: #163027 !important; }
+      }
+    </style></defs>
+  <rect class="card" x="1" y="1" width="378" height="212" rx="13" fill="#FFFFFF" stroke="#C5D6CB" stroke-width="1.5"/>
+  <text class="tag" x="20" y="28" fill="#047857" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700">01 · СРАВНЕНИЕ В КАДРЕ (GIF)</text>
+  <rect class="well" x="20" y="40" width="340" height="106" rx="9" fill="#0D1D18" stroke="#285042" stroke-width="1.2"/>
+  <!-- Левая половина: спектральный dNBR -->
+  <path d="M48,136 Q78,76 135,74 L190,74 L190,136 Z" fill="#9333EA" opacity="0.65"/>
+  <path d="M68,136 Q96,88 148,86 L190,86 L190,136 Z" fill="#F97316" opacity="0.80"/>
+  <path d="M92,136 Q118,102 162,100 L190,100 L190,136 Z" fill="#FDE047" opacity="0.86"/>
+  <!-- Правая половина: дискретные классы 1/2/3 -->
+  <path d="M190,74 L268,74 Q314,82 326,136 L190,136 Z" fill="#FB923C"/>
+  <path d="M214,92 L262,90 Q288,104 294,136 L208,136 Z" fill="#EF4444"/>
+  <ellipse cx="238" cy="58" rx="34" ry="9" fill="#EAB308"/>
+  <!-- Вертикальная шторка -->
+  <line x1="190" y1="40" x2="190" y2="146" stroke="#E6FFF5" stroke-width="2"/>
+  <circle cx="190" cy="93" r="10" fill="#0F211B" stroke="#6EE7B7" stroke-width="1.8"/>
+  <polygon points="185,93 188,90 188,96" fill="#6EE7B7"/>
+  <polygon points="195,93 192,90 192,96" fill="#6EE7B7"/>
+  <text class="ink" x="20" y="172" fill="#0E221B" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="15" font-weight="700">dNBR → маска степеней 0–3</text>
+  <text class="sub" x="20" y="193" fill="#4E6B5F" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="12">Sentinel-2 · BS_tr_000095 (20 м) · открыть GIF →</text>
+</svg>

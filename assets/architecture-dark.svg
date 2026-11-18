@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 444" width="1200" height="444" role="img" aria-label="Архитектура КосмоФАЙР-2: конвейер AF (VIIRS 375 м), конвейер BS (Sentinel-2 20 м + HistGradientBoosting + majority 3×3), RLE-ответ и геосервис FastAPI.">
+  <rect x="1" y="1" width="1198" height="442" rx="16" fill="#091410" stroke="#244A3C" stroke-width="1.5"/>
+
+  <text x="32" y="38" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#6EE7B7">АРХИТЕКТУРА РЕШЕНИЯ · ДВА КОНТУРА ДЗЗ → ЕДИНЫЙ RLE-ОТВЕТ И ГЕОСЕРВИС</text>
+
+  <!-- Полоса 1: AF (Active Fire) -->
+  <rect x="24" y="54" width="820" height="122" rx="12" fill="#122720" stroke="#244A3C" stroke-width="1.1"/>
+  <text x="40" y="76" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#FB923C">ЭТАП 1 · ACTIVE FIRE (fires/af.py · вес 0.35 · F1_AF = 0.9093 на train)</text>
+  <g transform="translate(40,88)"><rect width="240" height="76" rx="10" fill="#163027" stroke="#244A3C" stroke-width="1.3"/><rect x="0" y="12" width="4" height="52" rx="2" fill="#FB923C"/><text x="15" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="13" font-weight="800" fill="#F0F7F4">Чип VIIRS 375 м</text><text x="15" y="47" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="11.5" fill="#BED3C9">I1–I5, углы, WorldCover, ERA5</text><text x="15" y="64" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" fill="#82A395">256 × 256 px · 96 × 96 км</text></g>
+  <line x1="280" y1="126" x2="298" y2="126" stroke="#FB923C" stroke-width="2"/><polygon points="304,126 296,121.5 296,130.5" fill="#FB923C"/>
+  <g transform="translate(304,88)"><rect width="252" height="76" rx="10" fill="#163027" stroke="#244A3C" stroke-width="1.3"/><rect x="0" y="12" width="4" height="52" rx="2" fill="#FB923C"/><text x="15" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="13" font-weight="800" fill="#F0F7F4">Скрининг и шкалы день/ночь</text><text x="15" y="47" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="11.5" fill="#BED3C9">Вода, NaN, режим блика; SZA 95°</text><text x="15" y="64" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" fill="#82A395">T4 ≥ 330/295 K · ΔT ≥ 25/10 K</text></g>
+  <line x1="556" y1="126" x2="574" y2="126" stroke="#FB923C" stroke-width="2"/><polygon points="580,126 572,121.5 572,130.5" fill="#FB923C"/>
+  <g transform="translate(580,88)"><rect width="248" height="76" rx="10" fill="#2D1C12" stroke="#8F4A22" stroke-width="1.3"/><rect x="0" y="12" width="4" height="52" rx="2" fill="#FB923C"/><text x="15" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="13" font-weight="800" fill="#F0F7F4">Контекстный тест 71 × 71</text><text x="15" y="47" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="11.5" fill="#BED3C9">I4 > μ_bg + k·σ_bg (Schroeder)</text><text x="15" y="64" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" fill="#82A395">k_sigma = 2.5 (p35) · маска 0/1</text></g>
+
+  <!-- Полоса 2: BS (Burn Scar + Severity) -->
+  <rect x="24" y="192" width="820" height="122" rx="12" fill="#122720" stroke="#244A3C" stroke-width="1.1"/>
+  <text x="40" y="214" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#6EE7B7">ЭТАП 2 · BURN SCAR &amp; SEVERITY (fires/bs.py + severity.py · вес 0.35 + 0.30)</text>
+  <g transform="translate(40,226)"><rect width="240" height="76" rx="10" fill="#163027" stroke="#244A3C" stroke-width="1.3"/><rect x="0" y="12" width="4" height="52" rx="2" fill="#6EE7B7"/><text x="15" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="13" font-weight="800" fill="#F0F7F4">Sentinel-2 до/после + S1</text><text x="15" y="47" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="11.5" fill="#BED3C9">B2–B12, SCL, VV/VH, DEM, LC</text><text x="15" y="64" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" fill="#82A395">512 × 512 px · 20 м · 10,2 км</text></g>
+  <line x1="280" y1="264" x2="298" y2="264" stroke="#6EE7B7" stroke-width="2"/><polygon points="304,264 296,259.5 296,268.5" fill="#6EE7B7"/>
+  <g transform="translate(304,226)"><rect width="252" height="76" rx="10" fill="#163027" stroke="#244A3C" stroke-width="1.3"/><rect x="0" y="12" width="4" height="52" rx="2" fill="#6EE7B7"/><text x="15" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="13" font-weight="800" fill="#F0F7F4">Индексы + HGB-бустинг</text><text x="15" y="47" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="11.5" fill="#BED3C9">dNBR, NDVI, NDMI, контекст (23)</text><text x="15" y="64" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" fill="#82A395">SCL_BAD=(3,8,9,11) · CPU sklearn</text></g>
+  <line x1="556" y1="264" x2="574" y2="264" stroke="#6EE7B7" stroke-width="2"/><polygon points="580,264 572,259.5 572,268.5" fill="#6EE7B7"/>
+  <g transform="translate(580,226)"><rect width="248" height="76" rx="10" fill="#113529" stroke="#2A7A5B" stroke-width="1.3"/><rect x="0" y="12" width="4" height="52" rx="2" fill="#6EE7B7"/><text x="15" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="13" font-weight="800" fill="#F0F7F4">Постобработка (probe 35)</text><text x="15" y="47" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="11.5" fill="#BED3C9">Голосование 3×3 + чистка пятен</text><text x="15" y="64" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="10.5" fill="#82A395">majority 3×3 · min_patch 96 px</text></g>
+
+  <!-- Правая колонка: Выходы (CLI RLE + FastAPI Service) -->
+  <line x1="844" y1="126" x2="870" y2="126" stroke="#FBBF24" stroke-width="2"/><polygon points="876,126 868,121.5 868,130.5" fill="#FBBF24"/>
+  <line x1="844" y1="264" x2="870" y2="264" stroke="#7DD3FC" stroke-width="2"/><polygon points="876,264 868,259.5 868,268.5" fill="#7DD3FC"/>
+  <line x1="858" y1="126" x2="858" y2="264" stroke="#336B56" stroke-width="1.6" stroke-dasharray="4 3"/>
+
+  <rect x="876" y="54" width="300" height="122" rx="12" fill="#2B2412" stroke="#8A6518" stroke-width="1.3"/>
+  <text x="894" y="78" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#FBBF24">КОНКУРСНЫЙ ОТВЕТ (CLI)</text>
+  <text x="894" y="103" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="15" font-weight="800" fill="#F0F7F4">inference.py --validate</text>
+  <text x="894" y="125" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="12" fill="#BED3C9">Пул CPU-процессов · детерминизм</text>
+  <text x="894" y="145" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" fill="#BED3C9">447 строк RLE (180 AF + 3×89 BS)</text>
+  <text x="894" y="164" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#FBBF24">Score 0.7455 · 83,67 / 100 жюри</text>
+
+  <rect x="876" y="192" width="300" height="122" rx="12" fill="#112836" stroke="#276285" stroke-width="1.3"/>
+  <text x="894" y="216" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#7DD3FC">ПРОДУКТ И ВИЗУАЛИЗАЦИЯ</text>
+  <text x="894" y="241" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="15" font-weight="800" fill="#F0F7F4">FastAPI + Three.js 3D</text>
+  <text x="894" y="263" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="12" fill="#BED3C9">bbox / polygon + даты → GeoJSON, SHP</text>
+  <text x="894" y="283" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="12" fill="#BED3C9">Справка по площадям (га, JSON / CSV)</text>
+  <text x="894" y="302" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#7DD3FC">UTM→WGS84 без GDAL (fires/geo.py)</text>
+
+  <!-- Нижняя плашка: сквозной фундамент -->
+  <rect x="24" y="332" width="1152" height="88" rx="12" fill="#122720" stroke="#244A3C" stroke-width="1.1"/>
+  <text x="44" y="357" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', 'DejaVu Sans Mono', monospace" font-size="11" font-weight="700" fill="#82A395">СКВОЗНОЙ ИНЖЕНЕРНЫЙ КОНТУР</text>
+  <text x="44" y="382" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="12.5" fill="#F0F7F4">
+    <tspan font-weight="700">fires/chips.py</tspan> — автоопределение раскладки TIFF и каналов   ·
+    <tspan font-weight="700">train.py</tspan> — сплит по fire_event_id, SEED=20260918   ·
+    <tspan font-weight="700">evaluate.py</tspan> — точная микро-метрика и 12 абляций
+  </text>
+  <text x="44" y="404" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif" font-size="12.5" fill="#BED3C9">
+    <tspan font-weight="700">fires/synthetic.py</tspan> — офлайн smoke-стенд без 2,2 ГБ данных   ·
+    <tspan font-weight="700">tests/</tspan> — 82 автотеста (RLE, детекторы, бустинг, API)   ·
+    <tspan font-weight="700">Dockerfile</tspan> — non-root образ с healthcheck
+  </text>
+</svg>
